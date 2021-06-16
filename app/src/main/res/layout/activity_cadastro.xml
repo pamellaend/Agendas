@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/constraintLayout"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".Cadastro"
+        android:background="@drawable/imagemagenda"
+>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:id="@+id/textView"
+            style="@style/padraoTitulo"
+            android:layout_marginTop="35dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+    />
+    <EditText
+            android:id="@+id/nome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_name"
+            style="@style/padraoCaixaTxt"
+            android:inputType="textPersonName"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView"
+
+    />
+    <EditText
+            android:id="@+id/telefone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_telefone"
+            style="@style/padraoCaixaTxt"
+            android:inputType="number"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nome"
+    />
+
+    <RadioButton
+            android:id="@+id/buttonPessoal"
+            android:gravity="center"
+            android:text="@string/radioB_pessoal"
+            style="@style/radioButton"
+            android:textSize="20sp"
+            android:checked="true"
+            android:layout_marginTop="15dp"
+            android:onClick="onRadioButtonClicked"
+            app:layout_constraintStart_toStartOf="@+id/telefone"
+            android:layout_height="40dp"
+            android:layout_width="133dp"
+            app:layout_constraintTop_toBottomOf="@id/telefone">
+    </RadioButton>
+
+    <RadioButton
+            android:id="@+id/buttonTrabalho"
+            style="@style/radioButton"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:text="@string/radioB_trabalho"
+            android:onClick="onRadioButtonClicked"
+            android:layout_height="40dp"
+            android:layout_width="133dp"
+            app:layout_constraintStart_toStartOf="@+id/telefone"
+            app:layout_constraintTop_toBottomOf="@id/buttonPessoal">
+    </RadioButton>
+
+    <EditText
+            android:id="@+id/referencia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/padraoCaixaTxt"
+            android:inputType="text"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonTrabalho"
+    />
+
+    <Button
+            android:id="@+id/saveB"
+            android:layout_width="107dp"
+            android:layout_height="51dp"
+            android:text="@string/buttom_save"
+            style="@style/padraobutton"
+            android:textSize="15sp"
+            app:layout_constraintVertical_bias="0.01"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/referencia"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
