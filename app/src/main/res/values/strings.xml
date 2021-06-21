@@ -22,5 +22,6 @@
     <string name="button_cadastrar">Cadastrar contato</string>
     <string name="buttom_mostrartodos">Mostrar todos contatos</string>
     <string name="hint_pesquisar">Pesquisar:</string>
-
+    <string name="hint_item">Contato:</string>
+    <string name="delete_item">Delete contact</string>
 </resources>

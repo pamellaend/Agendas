@@ -20,13 +20,42 @@ class Cadastro :AppCompatActivity() {
     private lateinit var saveButton: Button
     private lateinit var refTxt: EditText
    // private lateinit var showContactsTxt: ArrayList
-    var lists = ArrayList<ArrayList<String>>()
+    var lists = ArrayList<String>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cadastro)
 
 
+//        bindView()
+//        val contacts = Agenda()
+//
+//        saveButton.setOnClickListener {
+//            val name = nameTxt.text.toString()
+//            val phone = celTxt.text.toString()
+//            val ref = refTxt.text.toString()
+//            if (name.isEmpty())  nameTxt.error=getString(R.string.error_nome)
+//            if (phone.isEmpty())  celTxt.error=getString(R.string.error_telefone)
+//
+//
+//            lists.add(contacts.addContact(name, phone, ref))
+//            makeText(this, getString(R.string.toast_cadastrado), LENGTH_SHORT).show()
+//
+//            val intent = Intent(this, MainActivity::class.java)
+//            intent.putExtra("save", contacts.listFinal())
+//            startActivity(intent)
+//
+//            nameTxt.text.clear()
+//            celTxt.text.clear()
+//            refTxt.text.clear()
+//
+//        }
+
+
+    }
+
+    override fun onResume() {
+        super.onResume()
         bindView()
         val contacts = Agenda()
 
